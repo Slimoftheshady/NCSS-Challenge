@@ -1,0 +1,19 @@
+cheeses = ['Cheddar', 'Bocconcini', 'Haloumi', 'Paneer', 'Gorgonzola', 'Mozzarella', 'Parmesan', 'Brie', 'Gruyere']
+
+# Add your code after this.
+a = input('Cheese: ')
+
+if a in cheeses:
+  print(f'{a} is a cheese!')
+else:
+  print(f'{a} might not be a cheese.')
+-------------------------------------------
+n = input('Tour name: ')
+data = input('Cities: ')
+# Split the user data into a list of items:
+tour = data.split()
+print(f'Announcing the national {n} tour!')
+print('Visiting these cities...')
+for item in tour:
+  print(f'🏙️ {item}')
+print(f'Get excited for {n}!')
