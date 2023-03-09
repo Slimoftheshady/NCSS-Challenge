@@ -1,0 +1,20 @@
+a = input("The next word is... ")
+c = len(a)
+d = a.upper()
+b = a.lower()
+print(b)
+for letter in d:
+  print(letter)
+print(b)
+-----------------------
+a = input("Which colour did you find? ")
+b = int(input("Number of tins: "))
+
+low = a.lower()
+if 'blue' in low:
+  print("Excellent! We'll soon have enough paint for the sky!")
+else:
+  if b < 4:
+    print(f"We're running out of {low} paint. Let's restock!")
+  else:
+    print(f"Great! We have {b} tins of {low} paint.")
