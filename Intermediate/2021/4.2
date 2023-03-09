@@ -1,0 +1,71 @@
+stream = {}
+coun = 0
+while coun != 5:
+  friend = input('Friend: ')
+  rec = input('Which stream did they recommend? ')
+  if rec in stream:
+    print('Someone else already recommended that.') 
+  else:
+    print(f'{friend} recommended {rec}!')
+    stream[rec] = friend
+    coun += 1
+    
+print('Playlist complete! Subscribe to:')
+for friend, rec in stream.items():
+  print(f'{friend}: recommended by {rec}')
+------------------------------------------------------
+c = 1
+dic = {}
+
+while c == 1:
+  item = input('Item: ')
+  if item != '':
+    num = int(input('Number sold: '))
+    if item not in dic:
+      dic[item] = num
+      
+    else:
+      dic[item] += num
+  else:
+    c = 0
+print('Total sales for today:')
+for i in dic:
+      print(f'{i} : {dic[i]}')
+---------------------------------
+def buy_slinkies(tickets):
+  # Finish the function to convert tickets to slinkies
+  return int(tickets / 3)
+
+
+# Write the rest of your program here
+lit = {}
+print("Who's here at the carnival today?")
+name = input('Name: ')
+
+while name != '':
+  if name not in lit:
+    tickets = int(input('Starting tickets: '))
+    a = buy_slinkies(tickets)
+    lit[name] = tickets
+    print(f"{name}'s here, starting with {a} slinkies worth of tickets!")
+    name = input('Name: ')
+    
+print('Let the games begin!')
+play = input('Who played? ')
+while play != '':
+  wl = int(input('Tickets won/lost: '))
+  if play in lit:
+    lit[play] = lit[play] + wl
+  else:
+    lit[play] = wl
+  play = input('Who played? ')
+    
+print("End of the day! Let's see how everyone did!")
+for friend, nu in lit.items():
+  print(f'{friend} can buy {int(nu / 3)} slinkies.')
+  
+  
+    
+    
+  
+  
