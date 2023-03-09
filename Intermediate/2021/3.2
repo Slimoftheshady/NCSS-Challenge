@@ -1,0 +1,46 @@
+c = 0
+out = []
+while c != 3:
+  x = input('Shop stock: ')
+  if 'cam' in x.lower():
+    out += [x]
+    c += 1
+    
+out.sort()
+out.reverse()
+print(f'''Proposals: {', '.join(out)}''')
+-------------------------------------------
+racers = ['Dash', 'Speedy', 'Lightning', 'Flash', 'Sonic']
+separator = ', '
+print('And the line up is: Dash, Speedy, Lightning, Flash, Sonic')
+leep = input("Who's gone to sleep? ")
+if leep in racers:
+  position = racers.index(leep)
+  racers[position] = 'Disqualified'
+  print(f'{leep} has been disqualified!')
+else:
+  print("All snails still awake.")
+joined = separator.join(racers)
+print(f'Remaining racers: {joined}')
+---------------------------------------------------
+todo_list = []
+total = 0
+print("Let's get planting everyone!")
+flower = input("What kind of flower did you plant? ")
+
+while flower != "":
+  num = int(input("How many did you plant? "))
+  total += num
+  if flower not in todo_list:
+    todo_list.append(flower)
+    print(f'Our first {flower}s! We just planted {num} of them!')
+  else:
+    print(f'Fantastic! We just planted {num} more {flower}s!')
+    
+  flower = input('What kind of flower did you plant? ')
+
+print(f'Nice work, everyone! We planted {total} flowers!')
+print('These are all the kinds of flowers we planted today:')
+todo_list.sort()
+for item in todo_list:
+  print(f'🏵️ {item}')
