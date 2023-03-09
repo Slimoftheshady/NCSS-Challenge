@@ -1,0 +1,15 @@
+dictionary = {'abecedarian': 'Someone learning the alphabet.', 'batrachophagous': 'To feed on frogs.', 'chirotonsor': 'A barber.', 'deltiologist': 'A postcard collector.', 'erinaceous': 'Of hedgehogs.', 'favillous': 'Looking like ashes.', 'grimalkin': 'A cat.', 'nelipot': 'Someone who goes barefoot often.', 'pogonotomy': 'Cutting a beard.', 'psithurism': 'The sound of wind in the trees.', 'scolecophagous': 'To eat worms.', 'xerophagy': 'Eating only dry food.'}
+word = input('Enter a word: ').lower()
+if word in dictionary:
+  print(dictionary[word])
+else:
+  print('Not in the dictionary!')
+----------------------------------------------
+wishlist = {'PS5': 750, 'Phone case': 30, 'Oodie': 90, 'LEGO Hogwarts Castle': 650, 'JBL Headphones': 130, 'Drum kit': 520, 'Phone recharge': 30, 'Earrings': 110, 'Spotify subscription': 60, 'Hockey stick': 130, 'Big Toblerone': 16, 'Volleyball': 90, 'Fitbit': 99, 'Harry Potter box set': 65, 'New Chucks': 70}
+x = int(input('How much money do you have to spend? '))
+w = wishlist
+print('The presents you can afford are:')
+for i in w:
+  if w[i] <= x:
+    print(i)
+
