@@ -1,0 +1,21 @@
+guests = ['Jane', 'Johnno', 'Dazza', 'Beryl', 'Kylie', 'Noa', 'Ainjewel', 'Brie', 'Wengie']
+
+# Add your code after this.
+a = input("Guest name: ")
+if a in guests:
+  print(f"{a} is on the list!")
+else:
+   print(f"{a} is not invited.")
+-----------------------------------------
+list = []
+a = input("Party theme: ")
+b = input("Supplies needed: ")
+print(f"The {a} party is coming up soon!")
+print("We will need to get...")
+list = b.split()
+
+for item in list:
+  print(f"🥳 {item}")
+
+
+print(f"Remember to invite your {a} buddies!")
