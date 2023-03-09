@@ -1,0 +1,19 @@
+a = input('Word: ')
+for letter in a:
+  letter = letter.upper()
+  print(letter)
+
+a = a.lower()
+print(a)
+-------------------------------------------
+a = input('Which plant did you survey? ')
+b = int(input('Count: '))
+a = a.lower()
+
+if 'fern' in a:
+  print('Fantastic! Keep looking for ferns!')
+elif b < 6:
+  print(f"That's low. We'll put {a} on the watch list.")
+
+else:
+  print(f"Great! Recorded {b} {a}s in this area.")
