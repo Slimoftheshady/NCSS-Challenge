@@ -1,0 +1,63 @@
+dic = {}
+count = 0
+while count < 5:
+  a = input("Friend: ")
+  b = input("Which recipe did they recommend? ")
+  if b in dic:
+      print("Someone else already recommended that.")
+  else:
+      dic[b] = a
+      print(f"{a} recommended {b}!")
+      count = count + 1
+print("Cookbook complete! Recipes include:")
+for name, rec in dic.items():
+  print(f'{name}: recommended by {rec}')
+---------------------------------------------------
+dic = {}
+a = input("Name: ")
+while a:
+  m = int(input("Minutes: "))
+  if a in dic:
+    dic[a] = dic[a] + m
+    a = input("Name: ")
+  else:
+    dic[a] = m
+    a = input("Name: ")
+print("Exercise total:")
+for x, y in dic.items():
+  if y >= 100:
+    print(f'{x}: {y} amazing, you will smash that beep test!')
+  else:
+    print(f"{x}: {y} keep moving, you can do it!")
+-----------------------------------------------------------------
+def buy_shadow_tokens(gold):
+  # Finish the function to convert gold to shadow tokens
+  num = int(gold/31)
+  return num
+
+# Write the rest of your program here
+dic = {}
+print("Who dares campaign in the Shadow Realm?")
+a = input("Name: ")
+while a:
+  b = int(input("Starting amount of gold: "))
+  mon = buy_shadow_tokens(b)
+  dic[a] = b
+  print(f"{a}'s here, starting with {mon} shadow tokens of gold!")
+  a = input("Name: ")
+print("Let's play!")
+
+d = input("Who played? ")
+while d:
+  if d in dic:
+    e = int(input("Gold won/lost: "))
+    dic[d] = dic[d] + e
+    d = input("Who played? ")
+  else:
+    dic[d] = 0
+    e = int(input("Gold won/lost: "))
+    dic[d] = dic[d] + e
+    d = input("Who played? ")
+print("End of the campaign! Let's see how everyone did!")
+for x, y in dic.items():
+  print(f'{x} has {y} gold coins and can buy {buy_shadow_tokens(y)} shadow tokens.')
