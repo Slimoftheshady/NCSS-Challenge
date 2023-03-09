@@ -1,0 +1,48 @@
+alist = []
+count = 0
+while count < 3:
+  a = input("Username: ")
+  b = a.lower()
+  if 'dais' in b:
+    alist.append(a)
+    count = count + 1
+alist.sort()
+alist.reverse()
+print("Proposals: " + ", ".join(alist))
+---------------------------------------------
+shopping = ['flour', 'milk', 'eggs', 'sugar', 'butter', 'baking powder']
+tick = ' ✅'
+a = len(shopping)
+b = str(a)
+print('Shopping List (' + b + ' items): '+', '.join(shopping))
+c = input("What ingredient did you find? ")
+if c in shopping:
+  position = shopping.index(c)
+  shopping[position] = c + tick
+  print(f"{c} has been found!")
+  print('Remaining items: '+ ', '.join(shopping))
+else:
+  print("Whoops, that's not on the list!")
+  print('Remaining items: '+ ', '.join(shopping))
+-----------------------------------------------------------
+alist = []
+counter = 0
+print("Let's start the walk-a-thon!")
+a = input("Who has recorded a walk? ")
+count = 0
+while a:
+  b = float(input("How far did they walk? "))
+  if a not in alist:
+    alist.append(a)
+    print(f"That's a first time for {a}! They walked {b} km!")
+  else:
+    print(f"Another walk from {a}. Well done on another {b} km!")
+  a = input("Who has recorded a walk? ")
+  count = count + b
+alist.sort()
+print(f"Thanks for taking part in the walk-a-thon! We walked a total of {count} km!")
+print("Here is a list of merit certificate winners:")
+for i in alist:
+  print(f"🏅 {i}")
+
+  
