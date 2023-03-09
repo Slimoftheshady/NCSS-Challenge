@@ -1,0 +1,14 @@
+count = 0
+un = float(input('Start (g): '))
+fin = float(input('Finish (g): '))
+while fin > un:
+  un = un + (0.6 * un)
+  count = count + 1
+print(f'The loaf would need to rise for {count} hours.')
+--------------------------------------------------------
+answer = input('Why does the sun rise in the east? ').lower()
+while "i don't know" not in answer: 
+    print('hmm...')
+    answer = input('But why? ').lower()
+  
+print("Let's find out!")
