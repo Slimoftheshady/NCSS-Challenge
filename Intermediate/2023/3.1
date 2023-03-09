@@ -1,0 +1,16 @@
+a = int(input("Initial population: "))
+b = int(input("Final population: "))
+count = 0
+while a < b:
+  a = a * 1.37
+  count = count + 1
+print(f"It would take {count} years for there to be {b} rabbits.")
+----------------------------------------------------------------------
+a = input("Lyric: ")
+b = a.lower()
+while "end" not in b:
+  print(a)
+  print("Do doo de do do de doo...")
+  a = input("Lyric: ")
+  b = a.lower()
+print("It's the end")
