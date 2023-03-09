@@ -28,6 +28,27 @@ density = float(input("How many grams per cup? "))
 
 grams = cups_to_grams(cups, density)
 print(f'{cups} cups of {food} is {grams} grams.')
+-------------------------------------------------------
+def to_kmh(knots):
+  # Calculate the speed in km/h
+  return
+  
+# Write the rest of your program here
+knot = float(input("Speed (kn): "))
+sped = 1.852 * knot
+rounded = round(sped,1)
+if rounded < 60:
+  print(f'{rounded} km/h - Go faster!')
+  
+elif 60 <= rounded < 100:
+  print(f'{rounded} km/h - Nice one.')
+  
+elif  100 <= rounded < 120:
+  print(f'{rounded} km/h - Radical!')
+  
+else:
+  print(f'{rounded} km/h - Whoa! Slow down!')
+
 
              
             
