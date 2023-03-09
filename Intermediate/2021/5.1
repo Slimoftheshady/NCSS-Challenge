@@ -1,0 +1,13 @@
+a = input('Chapter file: ')
+put = ''
+with open(a, 'r') as file:
+  contents = file.read()
+  con = contents.split()
+for i in range(0, 200, 5):
+  put = put + (f'{con[i]} ')
+print(put)
+------------------------------
+x, out = input('Letter: ').lower(), ''
+for i in ''.join(open('puzzle.txt', 'r')).lower().split('\n'): 
+  if i[0] == x: out += i[-1]
+print(f'Hidden message: {out}')
