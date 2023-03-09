@@ -1,0 +1,43 @@
+t = int(input('Times table: '))
+s = int(input('Step: '))
+c = 1
+i = 3
+while c == 1:
+  print(f'{t} x [ ] = {t * i}')
+  i += s
+  if i > 12:
+    c = 0
+-----------------------------------
+thing = 0
+for i in input('Sentence: ').split():
+  if i == i.upper():
+    thing += 1
+print(f'Number of shouted words: {thing}')
+--------------------------------------------
+arrogant_numbers = [3, 6, 7, 23, 25, 35, 39, 66, 68, 112, 119, 254, 259, 732, 737, 4565, 4663, 13330, 13730, 29880, 29998, 79670, 80015, 230054, 239068, 1534301, 1607352, 2060587, 21700891, 99167753, 99873125]
+
+def find_personality(number):
+  traits = ''
+  # Find the traits of the number
+  if number % 2 != 0:
+    traits = traits + 'odd '
+  # Check for other traits after this
+  global dull
+  if number>10000:
+    traits = traits + 'excessive ' 
+  if '3' in str(number): 
+    traits = traits + 'irksome ' 
+  if number in arrogant_numbers: 
+    traits = traits + 'arrogant ' 
+  if traits != '': 
+    print(number,"is an", traits+"number.") 
+  else: dull=dull+1
+# Write the rest of your program after this
+global dull
+dull=0
+num=input("Enter numbers: ").split() 
+for item in num: 
+  number=int(item) 
+  find_personality(number) 
+print("Dull numbers: "+str(dull))
+
