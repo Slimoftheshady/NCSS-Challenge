@@ -1,0 +1,17 @@
+a = input("Novel file: ")
+with open(a, 'r') as shopping:
+  contents = shopping.read()
+john = contents.split()
+for i in john:
+  if len(i) > 6:
+    print(i)
+----------------------------------
+with open('book.txt') as book:
+  a = input("Password: ")
+  for line in book:
+    line = line.strip()
+    line = line.lower()
+    john = line.split()
+    if a in line:
+      print(john[0])
+      
