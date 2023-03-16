@@ -1,0 +1,25 @@
+lists = []
+a = input("Enter an award file: ")
+with open(a) as f:
+  for line in f:
+    line = line.strip()
+    if line not in lists:
+      lists.append(line)
+
+lists.sort()
+print("And the nominees are...")
+for i in lists:
+  print(f"🎬 {i}")
+-------------------------------------
+data = {}
+li = []
+with open('midi.txt') as f:
+  for line in f:
+    key, value = line.split()
+    data[key] = value
+a = input('Secret Message: ').split()
+for i in range(len(a)):
+  if a[i] in data:
+      li.append(data[a[i]])
+
+print("Translation: " + " ".join(li))
