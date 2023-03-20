@@ -23,3 +23,64 @@ for i in range(len(a)):
       li.append(data[a[i]])
 
 print("Translation: " + " ".join(li))
+------------------------------------------------
+def get_replacements(replacements_filename):
+  # Given the name of a file containing word-replacement pairs, 
+  # return a dictionary that contains these pairs. The original words should
+  # be dictionary keys and the replacement words should be the values.
+  data = {}
+  with open(replacements_filename) as f:
+    for line in f:
+      key, value = line.split()
+      data[key] = value
+      
+  return data
+
+def convert_word(word, replacements):
+  # Given a single word, returns the replacement word in the same case if a 
+  # replacement exists for this word. If there is no replacement, then it
+  # returns the original word.
+  
+  if word.lower() in replacements:
+    if word.istitle():
+      replacementWord = replacements[word.lower()].title()
+    elif word.islower():
+      replacementWord = replacements[word.lower()]
+    elif word.isupper():
+       replacementWord = replacements[word.lower()].upper()
+    return replacementWord
+
+
+def convert_line(line, replacements):
+  # Given a string line and the replacements dictionary, returns the line 
+  # as a string with the words changed to their replacements and a space in 
+  # between each word. 
+  line = line.split()
+  newLine = ""
+  for word in line:
+    if convert_word(word, replacements):
+      newLine += convert_word(word, replacements) + " "
+    else:
+      newLine += word + " "
+   
+  return newLine.strip()
+
+
+def print_new_song(carol_filename, replacements):
+  # Given the name of the file containing the carol and a replacement words
+  # dictionary, prints out the title and lyrics of the new song
+  holidayName = replacements["christmas"].upper()
+  print("\nMY " + holidayName + " SONG!")
+    
+  with open(carol_filename) as file:
+    for line in file:
+      print(convert_line(line, replacements))
+
+
+# Write the rest of your program here
+a = input("Filename of carol lyrics: ")
+b = input("Filename of replacement words: ")
+
+replacements = get_replacements(b)
+print_new_song(a, replacements)
+#spud thank
